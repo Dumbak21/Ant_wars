@@ -1,0 +1,195 @@
+{
+    "py/object": "model.map.Map",
+    "anthills": [
+        {
+            "py/object": "model.anthill.Anthill",
+            "x_loc": 150,
+            "y_loc": 10,
+            "width": null,
+            "height": null,
+            "population": 20,
+            "available_ants": 20,
+            "owner": null,
+            "queue_to_send": {},
+            "clicked": false
+        },
+        {
+            "py/object": "model.anthill.Anthill",
+            "x_loc": 100,
+            "y_loc": 230,
+            "width": null,
+            "height": null,
+            "population": 20,
+            "available_ants": 20,
+            "owner": null,
+            "queue_to_send": {},
+            "clicked": false
+        },
+        {
+            "py/object": "model.anthill.Anthill",
+            "x_loc": 20,
+            "y_loc": 70,
+            "width": null,
+            "height": null,
+            "population": 20,
+            "available_ants": 20,
+            "owner": {
+                "py/object": "model.player.Player",
+                "name": "Gustav",
+                "number_of_ahs": 2
+            },
+            "queue_to_send": {},
+            "clicked": false
+        },
+        {
+            "py/object": "model.anthill.Anthill",
+            "x_loc": 30,
+            "y_loc": 150,
+            "width": null,
+            "height": null,
+            "population": 20,
+            "available_ants": 20,
+            "owner": {
+                "py/id": 7
+            },
+            "queue_to_send": {},
+            "clicked": false
+        },
+        {
+            "py/object": "model.anthill.Anthill",
+            "x_loc": 210,
+            "y_loc": 80,
+            "width": null,
+            "height": null,
+            "population": 20,
+            "available_ants": 20,
+            "owner": {
+                "py/object": "model.player.Player",
+                "name": "Bob",
+                "number_of_ahs": 2
+            },
+            "queue_to_send": {},
+            "clicked": false
+        },
+        {
+            "py/object": "model.anthill.Anthill",
+            "x_loc": 230,
+            "y_loc": 180,
+            "width": null,
+            "height": null,
+            "population": 20,
+            "available_ants": 20,
+            "owner": {
+                "py/id": 12
+            },
+            "queue_to_send": {},
+            "clicked": false
+        }
+    ],
+    "ah_coords": {
+        "json://{\"py/id\": 2}": {
+            "py/tuple": [
+                150,
+                10
+            ]
+        },
+        "json://{\"py/id\": 4}": {
+            "py/tuple": [
+                100,
+                230
+            ]
+        },
+        "json://{\"py/id\": 6}": {
+            "py/tuple": [
+                20,
+                70
+            ]
+        },
+        "json://{\"py/id\": 9}": {
+            "py/tuple": [
+                30,
+                150
+            ]
+        },
+        "json://{\"py/id\": 11}": {
+            "py/tuple": [
+                210,
+                80
+            ]
+        },
+        "json://{\"py/id\": 14}": {
+            "py/tuple": [
+                230,
+                180
+            ]
+        }
+    },
+    "player_ahs": {
+        "json://{\"py/id\": 7}": [
+            {
+                "py/id": 6
+            },
+            {
+                "py/id": 9
+            }
+        ],
+        "json://{\"py/id\": 12}": [
+            {
+                "py/id": 11
+            },
+            {
+                "py/id": 14
+            }
+        ]
+    },
+    "players": [
+        {
+            "py/id": 7
+        },
+        {
+            "py/id": 12
+        }
+    ],
+    "ant_coords": {},
+    "player_colors": {
+        "json://{\"py/id\": 7}": {
+            "py/reduce": [
+                {
+                    "py/type": "model.color.Color"
+                },
+                {
+                    "py/tuple": [
+                        {
+                            "py/tuple": [
+                                0,
+                                0,
+                                255
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "json://{\"py/id\": 12}": {
+            "py/reduce": [
+                {
+                    "py/type": "model.color.Color"
+                },
+                {
+                    "py/tuple": [
+                        {
+                            "py/tuple": [
+                                255,
+                                0,
+                                0
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "current_player": null,
+    "selected_ah": null,
+    "play_state": null
+}
