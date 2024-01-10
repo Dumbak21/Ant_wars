@@ -42,3 +42,5 @@ dependencies:
     - tomli==2.0.1
     - tomlkit==0.11.6
     - wrapt==1.14.1
+    - pytest-timeout==2.2.0
+    - pytest-ordering==0.0.6
