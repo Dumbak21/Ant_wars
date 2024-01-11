@@ -1,3 +1,5 @@
+'''Utils tests'''
+
 import pytest
 from utils import *
 from model.map import Map
@@ -38,7 +40,7 @@ def test_colors():
     '''
     test colors
     '''
-    players = [Player("Pepa"), Player("Jana"), Player("Adolf")]
+    players = [Player("Pepa"), Player("Jana"), Player("Adolf"), None]
     player_colors = assign_color_to_players(players)
 
     assert isinstance(player_colors, dict)

@@ -1,3 +1,5 @@
+'''Anthill tests'''
+
 import pytest
 from model.anthill import Anthill
 from model.player import Player

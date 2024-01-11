@@ -65,17 +65,17 @@ def get_map(map_id, player):
     ah_map = None
     ah_map = retrieve_map(map_id)
     if ah_map is None:
-        raise Exception('Map does not exist')
+        raise RuntimeError('Map does not exist')
     ah_map = set_new_map(player, ah_map)
     return ah_map
 
 def try_get_next_map(map_id, player):
     '''Get next map'''
-    ah_map = None
     try:
-        ah_map = get_map(map_id+1, player)
-    finally:
-        return ah_map
+        return get_map(map_id+1, player)
+    except RuntimeError:
+        return None
+
 
 
 def init_win():
@@ -83,6 +83,7 @@ def init_win():
     Initialize window
     '''
     pygame.init()
+    pygame.font.init()
     win = pygame.display.set_mode((WIDTH, HEIGHT), pygame.SCALED | pygame.RESIZABLE)
     pygame.display.set_caption('AntWars 3.0')
 

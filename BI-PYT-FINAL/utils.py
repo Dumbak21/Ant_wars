@@ -25,12 +25,15 @@ def json_to_map(json : str):
     '''Converts json to Map object'''
     return jsonpickle.decode(json, classes=[Map, Anthill, Player, Ant], keys=True)
 
-def retrieve_map(id):
+def retrieve_map(m_id):
     '''Gets map by id from map folder'''
-    map_names = listdir(MAP_URL)
-    re_map = re.compile(f"^map_{id}.txt")
+    map_url = MAP_URL
+    if map_url[-1] != '/':
+        map_url += '/'
+    map_names = listdir(map_url)
+    re_map = re.compile(f"^map_{m_id}.txt")
     if len(list(filter(re_map.match, map_names))) > 0:
-        with open(f'{MAP_URL}map_{id}.txt', 'r') as f:
+        with open(f'{map_url}map_{m_id}.txt', 'r') as f:
             return json_to_map(f.read())
     return None
 

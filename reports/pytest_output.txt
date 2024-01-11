@@ -1,0 +1,821 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.8, pytest-7.2.0, pluggy-1.0.0
+rootdir: C:\Users\Dumba\PETR\_CVUT\QUA\menclpet-semestral-BI-PYT-FINAL, configfile: pytest.ini
+plugins: ordering-0.6, timeout-2.2.0
+collected 154 items / 1 deselected / 153 selected
+
+tests\test_anthill.py ................................                   [ 20%]
+tests\test_game.py .....                                                 [ 24%]
+tests\test_map.py ...................................................... [ 59%]
+................FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.....                 [ 96%]
+tests\test_player.py ...                                                 [ 98%]
+tests\test_utils.py ...                                                  [100%]
+
+================================== FAILURES ===================================
+______________________ test_place_anthill_collide[98-98] ______________________
+
+x_loc = 98, y_loc = 98
+players = [<model.player.Player object at 0x000002497786EDA0>, <model.player.Player object at 0x000002497786CF40>, <model.player.Player object at 0x000002497786D9F0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[101-101] _____________________
+
+x_loc = 101, y_loc = 101
+players = [<model.player.Player object at 0x00000249778CE5C0>, <model.player.Player object at 0x00000249778CE680>, <model.player.Player object at 0x00000249778CE530>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[104-104] _____________________
+
+x_loc = 104, y_loc = 104
+players = [<model.player.Player object at 0x000002495D9D4400>, <model.player.Player object at 0x00000249776CDD20>, <model.player.Player object at 0x00000249776CC3D0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[107-107] _____________________
+
+x_loc = 107, y_loc = 107
+players = [<model.player.Player object at 0x00000249778CBB20>, <model.player.Player object at 0x00000249778CBEB0>, <model.player.Player object at 0x00000249778CBAC0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[110-110] _____________________
+
+x_loc = 110, y_loc = 110
+players = [<model.player.Player object at 0x00000249778CD960>, <model.player.Player object at 0x00000249778CDA50>, <model.player.Player object at 0x00000249778CD930>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[113-113] _____________________
+
+x_loc = 113, y_loc = 113
+players = [<model.player.Player object at 0x00000249776CF160>, <model.player.Player object at 0x00000249776CDCC0>, <model.player.Player object at 0x00000249776CD7E0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[116-116] _____________________
+
+x_loc = 116, y_loc = 116
+players = [<model.player.Player object at 0x00000249778D7BB0>, <model.player.Player object at 0x00000249778D7D60>, <model.player.Player object at 0x00000249778D7B20>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[119-119] _____________________
+
+x_loc = 119, y_loc = 119
+players = [<model.player.Player object at 0x00000249778CA980>, <model.player.Player object at 0x00000249778CA9E0>, <model.player.Player object at 0x00000249778C8D90>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[122-122] _____________________
+
+x_loc = 122, y_loc = 122
+players = [<model.player.Player object at 0x000002495D9D4250>, <model.player.Player object at 0x000002495D9D4520>, <model.player.Player object at 0x000002495D9D4760>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[125-125] _____________________
+
+x_loc = 125, y_loc = 125
+players = [<model.player.Player object at 0x00000249778C83A0>, <model.player.Player object at 0x00000249778C89D0>, <model.player.Player object at 0x00000249778C82E0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[128-128] _____________________
+
+x_loc = 128, y_loc = 128
+players = [<model.player.Player object at 0x00000249778D4370>, <model.player.Player object at 0x00000249778D6AD0>, <model.player.Player object at 0x00000249778D5C30>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[131-131] _____________________
+
+x_loc = 131, y_loc = 131
+players = [<model.player.Player object at 0x000002495D9D43D0>, <model.player.Player object at 0x000002495D9D42B0>, <model.player.Player object at 0x000002495D9D4520>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[134-134] _____________________
+
+x_loc = 134, y_loc = 134
+players = [<model.player.Player object at 0x00000249778D5BD0>, <model.player.Player object at 0x00000249778D7DC0>, <model.player.Player object at 0x00000249778D7CA0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[137-137] _____________________
+
+x_loc = 137, y_loc = 137
+players = [<model.player.Player object at 0x00000249778CA740>, <model.player.Player object at 0x00000249778C84C0>, <model.player.Player object at 0x00000249778CA3E0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[140-140] _____________________
+
+x_loc = 140, y_loc = 140
+players = [<model.player.Player object at 0x00000249778CE980>, <model.player.Player object at 0x00000249778CFBE0>, <model.player.Player object at 0x00000249778CDAB0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[143-143] _____________________
+
+x_loc = 143, y_loc = 143
+players = [<model.player.Player object at 0x00000249778CB580>, <model.player.Player object at 0x00000249778CAC20>, <model.player.Player object at 0x00000249778C9AE0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[146-146] _____________________
+
+x_loc = 146, y_loc = 146
+players = [<model.player.Player object at 0x00000249778CCFD0>, <model.player.Player object at 0x00000249778CF5E0>, <model.player.Player object at 0x00000249778CDE40>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[149-149] _____________________
+
+x_loc = 149, y_loc = 149
+players = [<model.player.Player object at 0x000002495D9D4730>, <model.player.Player object at 0x000002497786D570>, <model.player.Player object at 0x000002497786F760>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[152-152] _____________________
+
+x_loc = 152, y_loc = 152
+players = [<model.player.Player object at 0x00000249778CFC70>, <model.player.Player object at 0x00000249778CF850>, <model.player.Player object at 0x00000249778CE980>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[155-155] _____________________
+
+x_loc = 155, y_loc = 155
+players = [<model.player.Player object at 0x000002497786D2D0>, <model.player.Player object at 0x000002497786F010>, <model.player.Player object at 0x000002497786DA80>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[158-158] _____________________
+
+x_loc = 158, y_loc = 158
+players = [<model.player.Player object at 0x00000249778D5480>, <model.player.Player object at 0x00000249778D6B60>, <model.player.Player object at 0x00000249778D7EE0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[161-161] _____________________
+
+x_loc = 161, y_loc = 161
+players = [<model.player.Player object at 0x000002497786CD60>, <model.player.Player object at 0x000002497786C7F0>, <model.player.Player object at 0x000002497786FF70>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[164-164] _____________________
+
+x_loc = 164, y_loc = 164
+players = [<model.player.Player object at 0x0000024977926EF0>, <model.player.Player object at 0x0000024977926F50>, <model.player.Player object at 0x0000024977926E60>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[167-167] _____________________
+
+x_loc = 167, y_loc = 167
+players = [<model.player.Player object at 0x00000249778CB1F0>, <model.player.Player object at 0x00000249778C8220>, <model.player.Player object at 0x00000249778C8D00>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[170-170] _____________________
+
+x_loc = 170, y_loc = 170
+players = [<model.player.Player object at 0x00000249778D7790>, <model.player.Player object at 0x00000249778D53C0>, <model.player.Player object at 0x00000249778D5AE0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[173-173] _____________________
+
+x_loc = 173, y_loc = 173
+players = [<model.player.Player object at 0x0000024977927E20>, <model.player.Player object at 0x00000249779270D0>, <model.player.Player object at 0x0000024977924EE0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[176-176] _____________________
+
+x_loc = 176, y_loc = 176
+players = [<model.player.Player object at 0x00000249779034C0>, <model.player.Player object at 0x00000249779035E0>, <model.player.Player object at 0x0000024977901C90>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[179-179] _____________________
+
+x_loc = 179, y_loc = 179
+players = [<model.player.Player object at 0x0000024977926860>, <model.player.Player object at 0x00000249779260B0>, <model.player.Player object at 0x0000024977925660>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[182-182] _____________________
+
+x_loc = 182, y_loc = 182
+players = [<model.player.Player object at 0x0000024977902380>, <model.player.Player object at 0x0000024977903250>, <model.player.Player object at 0x0000024977900250>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[185-185] _____________________
+
+x_loc = 185, y_loc = 185
+players = [<model.player.Player object at 0x00000249778F1120>, <model.player.Player object at 0x00000249778F2EF0>, <model.player.Player object at 0x00000249778F1E10>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[188-188] _____________________
+
+x_loc = 188, y_loc = 188
+players = [<model.player.Player object at 0x0000024977903550>, <model.player.Player object at 0x00000249779035B0>, <model.player.Player object at 0x00000249779039D0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[191-191] _____________________
+
+x_loc = 191, y_loc = 191
+players = [<model.player.Player object at 0x00000249778F36A0>, <model.player.Player object at 0x00000249778F2D40>, <model.player.Player object at 0x00000249778F1D50>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[194-194] _____________________
+
+x_loc = 194, y_loc = 194
+players = [<model.player.Player object at 0x0000024977924BE0>, <model.player.Player object at 0x0000024977927790>, <model.player.Player object at 0x0000024977924250>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[197-197] _____________________
+
+x_loc = 197, y_loc = 197
+players = [<model.player.Player object at 0x00000249778D5300>, <model.player.Player object at 0x00000249778D64A0>, <model.player.Player object at 0x00000249778D6170>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+_____________________ test_place_anthill_collide[200-200] _____________________
+
+x_loc = 200, y_loc = 200
+players = [<model.player.Player object at 0x00000249778F1240>, <model.player.Player object at 0x00000249778F1DE0>, <model.player.Player object at 0x00000249778F17E0>]
+
+    @pytest.mark.run(after='test_place_anthill_loc')
+    @pytest.mark.parametrize('x_loc, y_loc', [*zip([*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    [*range(MAP_AREA_SIZE//2-ANTHILL_SIZE-2,MAP_AREA_SIZE//2+ANTHILL_SIZE+2,3)],
+                                                    )])
+    def test_place_anthill_collide(x_loc, y_loc, players):
+        map = Map()
+        owner = players[0]
+        anthill1 = Anthill(owner, 20, 20)
+        anthill2 = Anthill(owner, 20, 20)
+    
+        map.place_anthill(anthill1, MAP_AREA_SIZE//2, MAP_AREA_SIZE//2)
+        if x_loc >= anthill1.x_loc - ANTHILL_SIZE - 1 or x_loc < anthill1.x_loc + ANTHILL_SIZE + 1 or\
+           y_loc >= anthill1.y_loc - ANTHILL_SIZE - 1 or y_loc < anthill1.y_loc + ANTHILL_SIZE + 1:
+>           with pytest.raises(ValueError):
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_map.py:56: Failed
+=========================== short test summary info ===========================
+FAILED tests\test_map.py::test_place_anthill_collide[98-98] - Failed: DID NOT...
+FAILED tests\test_map.py::test_place_anthill_collide[101-101] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[104-104] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[107-107] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[110-110] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[113-113] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[116-116] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[119-119] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[122-122] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[125-125] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[128-128] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[131-131] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[134-134] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[137-137] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[140-140] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[143-143] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[146-146] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[149-149] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[152-152] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[155-155] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[158-158] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[161-161] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[164-164] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[167-167] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[170-170] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[173-173] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[176-176] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[179-179] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[182-182] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[185-185] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[188-188] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[191-191] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[194-194] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[197-197] - Failed: DID N...
+FAILED tests\test_map.py::test_place_anthill_collide[200-200] - Failed: DID N...
+================ 35 failed, 118 passed, 1 deselected in 1.35s =================

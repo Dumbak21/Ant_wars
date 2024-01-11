@@ -1,3 +1,5 @@
+'''Player tests'''
+
 import pytest
 from model.player import Player
 

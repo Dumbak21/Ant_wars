@@ -3,14 +3,17 @@ from model.player import Player
 from model.ant import Ant
 
 ANT_FORMATION_SIZE = 5
-
 ANT_STEP_SIZE = 10
+
+ANT_SIZE = 6
+ANTHILL_SIZE = 50
+MAP_AREA_SIZE = 300
 
 class Map:
     '''Map - interactions with map elements.'''
     def __init__(self, anthills = None, ah_coords = None, player_ahs = None, players = None,\
                 ant_coords = None, player_colors = None, current_player : Player = None,\
-                selected_ah = None, play_state = None):
+                selected_ah = None, play_state = None, size = (MAP_AREA_SIZE, MAP_AREA_SIZE)):
         if anthills is None:
             self.anthills = []
         else:
@@ -56,9 +59,20 @@ class Map:
         else:
             self.play_state = play_state
 
+        if size[0] > ANTHILL_SIZE and size[1] > ANTHILL_SIZE:
+            self.size = size
+        else:
+            raise ValueError
+
 
     def place_anthill(self, ah : Anthill, x_loc, y_loc):
         '''Places anthill on location'''
+        if x_loc < 0 or y_loc < 0 or x_loc > self.size[0] - ANTHILL_SIZE//2 or y_loc > self.size[1] - ANTHILL_SIZE//2:
+            raise ValueError('location out of map')
+        for anthill in self.anthills:
+            if x_loc >= anthill.x_loc - ANTHILL_SIZE - 1 and x_loc < anthill.x_loc + ANTHILL_SIZE + 1 and\
+                y_loc >= anthill.y_loc - ANTHILL_SIZE - 1 and y_loc < anthill.y_loc + ANTHILL_SIZE + 1:
+                raise ValueError('anthill collides with another')
         self.ah_coords[ah] = (x_loc,y_loc)
         self.anthills.append(ah)
         ah.x_loc = x_loc
@@ -71,6 +85,8 @@ class Map:
 
     def ah_change_owner(self, ah : Anthill, new_owner : Player):
         '''Change owner of anthill'''
+        if ah.owner == new_owner:
+            return
         # Remove from old player
         if ah.owner in self.player_ahs:
             if ah in self.player_ahs[ah.owner]:
